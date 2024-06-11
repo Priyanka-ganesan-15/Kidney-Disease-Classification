@@ -19,3 +19,35 @@
 [2024-06-11 17:23:10,359: INFO: common: created directory at: artifacts/data_ingestion]
 [2024-06-11 17:23:10,359: INFO: 1630606363: Downloading data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
 [2024-06-11 17:25:25,269: INFO: 1630606363: Downloaded data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-11 18:03:48,822: INFO: main: >>>> stage Data Ingestion stage started <<<<]
+[2024-06-11 18:03:48,823: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-11 18:03:48,824: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-11 18:03:48,824: INFO: common: created directory at: artifacts]
+[2024-06-11 18:03:48,824: ERROR: main: 'configurationManager' object has no attribute 'get_dataIngestion_config']
+Traceback (most recent call last):
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/main.py", line 9, in <module>
+    obj.main()
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/src/cnnClassifier/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_dataIngestion_config()
+AttributeError: 'configurationManager' object has no attribute 'get_dataIngestion_config'
+[2024-06-11 18:04:13,757: INFO: main: >>>> stage Data Ingestion stage started <<<<]
+[2024-06-11 18:04:13,758: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-11 18:04:13,758: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-11 18:04:13,758: INFO: common: created directory at: artifacts]
+[2024-06-11 18:04:13,758: ERROR: main: 'configurationManager' object has no attribute 'get_dataingestion_config']
+Traceback (most recent call last):
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/main.py", line 9, in <module>
+    obj.main()
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/src/cnnClassifier/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_dataingestion_config()
+AttributeError: 'configurationManager' object has no attribute 'get_dataingestion_config'
+[2024-06-11 18:04:22,130: INFO: main: >>>> stage Data Ingestion stage started <<<<]
+[2024-06-11 18:04:22,131: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-11 18:04:22,131: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-11 18:04:22,131: INFO: common: created directory at: artifacts]
+[2024-06-11 18:04:22,131: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-11 18:04:22,132: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-11 18:06:39,455: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-11 18:07:06,728: INFO: main: >>>> stage Data Ingestion stage completed <<<<
+
+x=========x]

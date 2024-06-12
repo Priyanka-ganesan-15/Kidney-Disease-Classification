@@ -80,3 +80,70 @@ x=========x]
 [2024-06-11 21:37:44,612: INFO: main: >>>>>> stage Prepare Base Model completed <<<<<<
 
 x==========x]
+[2024-06-12 15:46:08,550: INFO: main: >>>> stage Data Ingestion stage started <<<<]
+[2024-06-12 15:46:08,552: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-12 15:46:08,553: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-12 15:46:08,553: INFO: common: created directory at: artifacts]
+[2024-06-12 15:46:08,553: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-12 15:46:08,553: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-12 15:49:58,441: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-12 15:50:04,841: INFO: main: >>>> stage Data Ingestion stage completed <<<<
+
+x=========x]
+[2024-06-12 15:50:04,842: INFO: main: *******************]
+[2024-06-12 15:50:04,842: INFO: main: >>>>>> stage Prepare Base Model started <<<<<<]
+[2024-06-12 15:50:04,844: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-12 15:50:04,845: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-12 15:50:04,845: INFO: common: created directory at: artifacts]
+[2024-06-12 15:50:04,845: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-06-12 15:50:05,246: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-06-12 15:50:05,336: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2024-06-12 15:50:05,339: WARNING: __init__: There is a known slowdown when using v2.11+ Keras optimizers on M1/M2 Macs. Falling back to the legacy Keras optimizer, i.e., `tf.keras.optimizers.legacy.SGD`.]
+[2024-06-12 15:50:05,399: INFO: main: >>>>>> stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2024-06-12 15:50:05,399: INFO: main: *******************]
+[2024-06-12 15:50:05,399: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-06-12 15:50:05,401: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-12 15:50:05,403: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-12 15:50:05,403: INFO: common: created directory at: artifacts]
+[2024-06-12 15:50:05,403: ERROR: main: name 'os' is not defined]
+Traceback (most recent call last):
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/main.py", line 35, in <module>
+    model_trainer.main()
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/src/cnnClassifier/pipeline/stage_03_model_training.py", line 17, in main
+    training_config = config.get_training_config()
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/src/cnnClassifier/config/configuration.py", line 52, in get_training_config
+    training_data = os.path.join(self.config.data_ingestion.unzip_dir, "dataset_kidney")
+NameError: name 'os' is not defined
+[2024-06-12 15:53:07,895: INFO: main: >>>> stage Data Ingestion stage started <<<<]
+[2024-06-12 15:53:07,897: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-12 15:53:07,898: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-12 15:53:07,898: INFO: common: created directory at: artifacts]
+[2024-06-12 15:53:07,898: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-12 15:53:07,898: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-12 15:56:59,257: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-12 15:57:05,199: INFO: main: >>>> stage Data Ingestion stage completed <<<<
+
+x=========x]
+[2024-06-12 15:57:05,200: INFO: main: *******************]
+[2024-06-12 15:57:05,200: INFO: main: >>>>>> stage Prepare Base Model started <<<<<<]
+[2024-06-12 15:57:05,202: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-12 15:57:05,203: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-12 15:57:05,203: INFO: common: created directory at: artifacts]
+[2024-06-12 15:57:05,203: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-06-12 15:57:05,632: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-06-12 15:57:05,808: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2024-06-12 15:57:05,812: WARNING: __init__: There is a known slowdown when using v2.11+ Keras optimizers on M1/M2 Macs. Falling back to the legacy Keras optimizer, i.e., `tf.keras.optimizers.legacy.SGD`.]
+[2024-06-12 15:57:05,896: INFO: main: >>>>>> stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2024-06-12 15:57:05,896: INFO: main: *******************]
+[2024-06-12 15:57:05,896: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-06-12 15:57:05,898: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-12 15:57:05,899: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-12 15:57:05,899: INFO: common: created directory at: artifacts]
+[2024-06-12 15:57:05,899: INFO: common: created directory at: artifacts/training]
+[2024-06-12 16:12:02,676: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]

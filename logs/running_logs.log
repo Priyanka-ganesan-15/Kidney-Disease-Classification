@@ -546,3 +546,84 @@ x==========x]
 [2024-06-14 16:30:18,846: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-06-14 16:43:02,309: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion stage started <<<<]
+[2024-06-14 16:43:02,313: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-14 16:43:02,313: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-14 16:43:02,313: INFO: common: created directory at: artifacts]
+[2024-06-14 16:43:02,314: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-14 16:43:02,314: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-14 16:44:51,607: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-14 16:45:03,659: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion stage completed <<<<
+
+x=========x]
+[2024-06-14 16:56:55,233: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion stage started <<<<]
+[2024-06-14 16:56:55,236: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-14 16:56:55,236: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-14 16:56:55,236: INFO: common: created directory at: artifacts]
+[2024-06-14 16:56:55,236: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-14 16:56:55,237: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-14 16:58:39,315: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1hetGbKR9sCqregkcIAk6-3-AapZ9mpOo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-06-14 16:58:45,465: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion stage completed <<<<
+
+x=========x]
+[2024-06-14 16:59:00,163: INFO: stage_02_prepare_base_model: *******************]
+[2024-06-14 16:59:00,163: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-06-14 16:59:00,165: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-14 16:59:00,165: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-14 16:59:00,165: INFO: common: created directory at: artifacts]
+[2024-06-14 16:59:00,165: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-06-14 16:59:00,432: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-06-14 16:59:00,549: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2024-06-14 16:59:00,552: WARNING: __init__: There is a known slowdown when using v2.11+ Keras optimizers on M1/M2 Macs. Falling back to the legacy Keras optimizer, i.e., `tf.keras.optimizers.legacy.SGD`.]
+[2024-06-14 16:59:00,644: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-06-14 16:59:04,370: INFO: stage_03_model_training: *******************]
+[2024-06-14 16:59:04,370: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2024-06-14 16:59:04,371: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-14 16:59:04,372: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-14 16:59:04,372: INFO: common: created directory at: artifacts]
+[2024-06-14 16:59:04,372: INFO: common: created directory at: artifacts/training]
+[2024-06-14 17:11:41,667: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-06-14 17:11:47,544: INFO: stage_04_model_evaluation: *******************]
+[2024-06-14 17:11:47,545: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-06-14 17:11:47,609: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-14 17:11:47,610: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-14 17:11:47,610: INFO: common: created directory at: artifacts]
+[2024-06-14 17:16:35,656: INFO: common: json file saved at: scores.json]
+[2024-06-14 17:16:35,658: INFO: common: json file saved at: scores.json]
+[2024-06-14 17:16:36,795: ERROR: stage_04_model_evaluation: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}]
+Traceback (most recent call last):
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/src/cnnClassifier/pipeline/stage_04_model_evaluation.py", line 30, in <module>
+    obj.main()
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/src/cnnClassifier/pipeline/stage_04_model_evaluation.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/src/cnnClassifier/components/model_evaluation_mlflow.py", line 62, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/.venv/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/.venv/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/.venv/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/.venv/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/.venv/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/.venv/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/priyankaganesan/Desktop/Kidney-Disease-Classification/.venv/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 207, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INVALID_PARAMETER_VALUE: Response: {'error_code': 'INVALID_PARAMETER_VALUE'}
+[2024-06-14 17:18:31,410: INFO: stage_04_model_evaluation: *******************]
+[2024-06-14 17:18:31,412: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-06-14 17:18:31,473: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-14 17:18:31,473: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-14 17:18:31,473: INFO: common: created directory at: artifacts]
+[2024-06-14 17:22:11,099: INFO: common: json file saved at: scores.json]
+[2024-06-14 17:22:11,100: INFO: common: json file saved at: scores.json]
+[2024-06-14 17:22:11,100: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
